@@ -1,0 +1,78 @@
+* {
+  margin: 0; /* dış boşluk */
+  padding: 0; /* iç boşluk */
+  box-sizing: border-box; /* kutu boyutunu içerik, iç boşluk ve kenarlık olarak hesapla */
+}
+
+:root{
+  --white:#f0f1f2;
+  --parag:#c0cbe6
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Fira Code', 'Arial Narrow', Arial, sans-serif;
+  color: rgb(255, 255, 255);
+  color: #fff; /* */
+  color: #f0f1f2;
+  color: var(--white);
+  background-color: #172033;
+}
+
+.site-shell {
+  width: min(900px, 92%);
+  min-height: 100vh;
+  margin: auto;
+  display: grid;
+  place-items: center;
+  padding: 40px 0px 40px 0px;
+  padding: 40px 0 40px 0;
+  padding: 40px 0;
+}
+
+.form-card {
+  width: 100%;
+  padding: 100px;
+  padding: 6.25rem; /* 1rem= 16px (Html) */
+  border-radius: 1rem;
+  background: #ffffff;
+  color: #172033;
+  box-shadow: 0.8rem 10px 1rem 0.3rem rgba(235, 231, 231, 0.7);
+  border: 1px solid yellow;
+}
+
+.form-header {
+  margin-bottom: 1.2rem;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, #2563eb, #0f172a);
+  color: var(--white);
+}
+
+/* #form-title{}  .form-header h2{}   .site-shell .form-card .form-header h2*/
+ .form-header h2{
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+}
+
+
+ .form-header p{
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+  color: var(--parag);
+}
+
+
+fieldset {
+  border:0;
+}
+
+legend{
+  margin-bottom:1.2rem;
+  font-size:1.4rem;
+  font-weight:bolder;
+}

@@ -18,6 +18,7 @@
     <!-- external css -->
      <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
+  <body>
     <noscript>
       <!-- JavaScript devre dışı bırakılmışsa gösterilecek içerik -->
       <p>
@@ -33,7 +34,7 @@
       <section class="form-card" id="form" aria-labelledby="form-title">
         <!-- div.form-header>h2#form-title{Eğitim/Danıimanlık Başvuru Formu}+p{Bilgilerinizi eksiksiz giriniz} -->
          <div class="form-header">
-          <h2 id="form-title">Eğitim/Danıimanlık Başvuru Formu</h2>
+          <h2 id="form-title">Eğitim/Danışmanlık Başvuru Formu</h2>
           <p>Bilgilerinizi eksiksiz giriniz (*)</p>
          </div>
       </section>
@@ -41,10 +42,10 @@
       <!-- form -->
       <form action="#" method="get">
         <fieldset>
-          <legend>1) Kişisel Bilgiler</legend>
-              <div class="form-row">
+          <legend>Kişisel Bilgiler</legend>
 
-                <!-- Adınız (*) -->
+           <!-- Adınız/ soyad -->
+              <div class="form-row">
                 <div class="input-group">
                     <label for="fullname">Adınız (*)</label>
                     <input 
@@ -73,8 +74,8 @@
                 </div>
               </div>
 
+              <!-- Email * -->
               <div class="form-row"> 
-                  <!-- Email * -->
                 <div class="input-group">
                     <label for="email">E-Posta (*)</label>
                     <input 
@@ -118,6 +119,7 @@
                 </div>
               </div>
 
+              <!-- check -->
               <div class="form-row">
                 <div class="check-line">
                   <input type="checkbox" required />
