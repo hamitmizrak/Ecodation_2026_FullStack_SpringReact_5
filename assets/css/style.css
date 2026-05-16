@@ -59,13 +59,11 @@ body {
   font-size: 1.8rem;
 }
 
-
  .form-header p{
   margin-bottom: 0.5rem;
   line-height: 1.5;
   color: var(--parag);
 }
-
 
 fieldset {
   border:0;
@@ -75,4 +73,9 @@ legend{
   margin-bottom:1.2rem;
   font-size:1.4rem;
   font-weight:bolder;
+}
+
+
+.form-row{
+  
 }
