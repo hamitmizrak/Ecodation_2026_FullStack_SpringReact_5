@@ -40,94 +40,91 @@
       <form action="#" method="get">
         <fieldset>
           <legend>1) Kişisel Bilgiler</legend>
-          <div class="form-row">
+              <div class="form-row">
 
-            <!-- Adınız (*) -->
-            <div class="input-group">
-                <label for="fullname">Adınız (*)</label>
-                <input 
-                type="text" 
-                id="name" 
-                name="name" 
-                placeholder="Adınız" 
-                minlength="3" 
-                required 
-                autofocus /> 
-                <small class="input-help">En az 3 karakter uzunluğunda olmalıdır.</small>
-            </div>
+                <!-- Adınız (*) -->
+                <div class="input-group">
+                    <label for="fullname">Adınız (*)</label>
+                    <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    placeholder="Adınız" 
+                    minlength="3" 
+                    required 
+                    autofocus /> 
+                    <small class="input-help">En az 3 karakter uzunluğunda olmalıdır.</small>
+                </div>
 
-            <!-- Soyadınız (*) -->
-            <div class="input-group">
-                <label for="surname">Soyadınız (*)</label>
-                <input 
-                type="text" 
-                id="surname" 
-                name="surname" 
-                placeholder="Soyadınız ..." 
-                minlength="3" 
-                required 
-                autofocus /> 
-                <small class="input-help">En az 3 karakter uzunluğunda olmalıdır.</small>
-            </div>
-          </div>
+                <!-- Soyadınız (*) -->
+                <div class="input-group">
+                    <label for="surname">Soyadınız (*)</label>
+                    <input 
+                    type="text" 
+                    id="surname" 
+                    name="surname" 
+                    placeholder="Soyadınız ..." 
+                    minlength="3" 
+                    required 
+                    autofocus /> 
+                    <small class="input-help">En az 3 karakter uzunluğunda olmalıdır.</small>
+                </div>
+              </div>
 
-           <div class="form-row"> 
-              <!-- Email * -->
-            <div class="input-group">
-                <label for="email">E-Posta (*)</label>
-                <input 
-                type="email" 
-                id="email" 
-                name="email" 
-                placeholder="örnek:hamitmizrak@gmail.com" 
-                required 
-              /> 
-            <small class="input-help">örnek:hamitmizrak@gmail.com</small>
-            </div>  
+              <div class="form-row"> 
+                  <!-- Email * -->
+                <div class="input-group">
+                    <label for="email">E-Posta (*)</label>
+                    <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    placeholder="örnek:hamitmizrak@gmail.com" 
+                    required 
+                  /> 
+                <small class="input-help">örnek:hamitmizrak@gmail.com</small>
+                </div>  
 
-
-          <!-- Telefon numaranız * -->
-            <div class="input-group">
-                <label for="phone">Telefon numaranız (*)</label>
-                <input 
-                type="tel" 
-                id="phone" 
-                name="phone" 
-                placeholder="Adı+90 111 222 33 44" 
-                pattern="[0-9s()+-]{10,18}"
-                required  /> 
-                <small class="input-help">Sadece telefon formatına uygun karakterler kullanılabilir.</small>
-            </div>
-           </div>
+              <!-- Telefon numaranız * -->
+                <div class="input-group">
+                    <label for="phone">Telefon numaranız (*)</label>
+                    <input 
+                    type="tel" 
+                    id="phone" 
+                    name="phone" 
+                    placeholder="Adı+90 111 222 33 44" 
+                    pattern="[0-9s()+-]{10,18}"
+                    required  /> 
+                    <small class="input-help">Sadece telefon formatına uygun karakterler kullanılabilir.</small>
+                </div>
+              </div>
 
 
               <div class="form-row"> 
             <!-- Şehir -->
-            <div class="input-group">
-                <label for="city">Şehir</label>
-                <select name="city" id="city">
-                  <option value="" selected disabled>Seçiniz</option>
-                  <option value="malatya">Malatya</option>
-                  <option value="istanbul">İstanbul</option>
-                  <option value="ankara">Ankara</option>
-                  <option value="izmir">İzmir</option>
-                  <option value="bursa">Bursa</option>
-                </select>
-              
-              <small class="input-help">Şehir seçiniz(*)</small>
-            </div>
-
+                <div class="input-group">
+                    <label for="city">Şehir</label>
+                    <select name="city" id="city">
+                      <option value="" selected disabled>Seçiniz</option>
+                      <option value="malatya">Malatya</option>
+                      <option value="istanbul">İstanbul</option>
+                      <option value="ankara">Ankara</option>
+                      <option value="izmir">İzmir</option>
+                      <option value="bursa">Bursa</option>
+                    </select>
+                  <small class="input-help">Şehir seçiniz(*)</small>
+                </div>
               </div>
+
               <div class="form-row">
                 <div class="check-line">
                   <input type="checkbox" required />
                   <label for="terms">Kullanım koşullarını kabul ediyorum (*)</label>
                 <a href="#"> Aydınlatma Metni</a>
-                </div> </div>
-
+                </div> 
+              </div>
 
               <div class="button-row"> 
-
                 <button class="ghost-btn" type="reset">Temizle</button>
                 <button class="submit-btn" type="submit">Başvuyu Gönder</button>
               </div>
