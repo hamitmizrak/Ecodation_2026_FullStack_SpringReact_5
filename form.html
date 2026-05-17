@@ -8,7 +8,7 @@
     <meta charset="UTF-8" />
     <!-- Responsive Design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Full stack developer</title>
+    <title>Full stack developer-5</title>
     <link rel="icon" type="image/x-icon" href="./assets/image/favicon.png" />
 
     <meta name="author" content="MsC Hamit Mızrak" />
@@ -37,10 +37,9 @@
           <h2 id="form-title">Eğitim/Danışmanlık Başvuru Formu</h2>
           <p>Bilgilerinizi eksiksiz giriniz (*)</p>
         </div>
-      </section>
-
+    
       <!-- form -->
-      <form action="#" method="get">
+      <form action="#" method="get" autocomplete="on">
         <fieldset>
           <legend>Kişisel Bilgiler</legend>
 
@@ -70,7 +69,6 @@
                 placeholder="Soyadınız ..."
                 minlength="3"
                 required
-                autofocus
               />
               <small class="input-help">En az 3 karakter uzunluğunda olmalıdır.</small>
             </div>
@@ -97,8 +95,8 @@
                 type="tel"
                 id="phone"
                 name="phone"
-                placeholder="Adı+90 111 222 33 44"
-                pattern="[0-9s()+-]{10,18}"
+                placeholder="+90 111 222 33 44"
+                pattern="[0-9\s()+-]{10,18}"
                 required
               />
               <small class="input-help">
@@ -116,7 +114,7 @@
           </div>
 
           <!-- Şehir -->
-          <div class="form-row">
+          <div class="form-row single">
             <div class="input-group">
               <label for="city">Şehir</label>
               <select name="city" id="city">
@@ -132,9 +130,9 @@
           </div>
 
           <!-- check -->
-          <div class="form-row">
+          <div class="form-row single">
             <div class="check-line">
-              <input type="checkbox" required />
+              <input type="checkbox" id="terms" name="terms" required />
               <label for="terms">Kullanım koşullarını kabul ediyorum (*)</label>
               <a href="#">Aydınlatma Metni</a>
             </div>
@@ -146,8 +144,8 @@
           </div>
         </fieldset>
       </form>
+      </section>
     </main>
-
     <!--  End Code -->
   </body>
 </html>

@@ -5,7 +5,9 @@
 }
 
 :root {
-  --white: #f0f1f2;
+  --company-white: #d1c8c8;
+  --company-black: #292929;
+  --company-black-opacity: rgba(0, 0, 0, 0.6);
   --parag: #c0cbe6;
 }
 
@@ -16,11 +18,11 @@ html {
 body {
   min-height: 100vh;
   font-family: 'Fira Code', 'Arial Narrow', Arial, sans-serif;
-  color: rgb(255, 255, 255);
-  color: #fff; /* */
-  color: #f0f1f2;
-  color: var(--white);
-  background-color: #172033;
+  /* color: rgb(255, 255, 255);
+  color: #fff; 
+  color: #f0f1f2; */
+  color: var(--company-black);
+  background: linear-gradient(135deg, #6a6e6e, #000000);
 }
 
 .site-shell {
@@ -29,28 +31,27 @@ body {
   margin: auto;
   display: grid;
   place-items: center;
-  padding: 40px 0px 40px 0px;
-  padding: 40px 0 40px 0;
+  /* padding: 40px 0px 40px 0px;
+  padding: 40px 0 40px 0; */
   padding: 40px 0;
 }
 
 .form-card {
   width: 100%;
-  padding: 100px;
-  padding: 6.25rem; /* 1rem= 16px (Html) */
+  /* padding: 100px; */
+  padding: 6.2rem; /* 1rem= 16px (Html) */
   border-radius: 1rem;
   background: #ffffff;
-  color: #172033;
   box-shadow: 0.8rem 10px 1rem 0.3rem rgba(235, 231, 231, 0.7);
-  border: 1px solid yellow;
+  border: 2px solid rgba(216, 179, 179, 0.6);
 }
 
 .form-header {
   margin-bottom: 1.2rem;
   padding: 1.5rem;
   border-radius: 1rem;
+  color: var(--company-white);
   background: linear-gradient(135deg, #2563eb, #0f172a);
-  color: var(--white);
 }
 
 /* #form-title{}  .form-header h2{}   .site-shell .form-card .form-header h2*/
@@ -62,7 +63,7 @@ body {
 .form-header p {
   margin-bottom: 0.5rem;
   line-height: 1.5;
-  color: var(--parag);
+  color: var(--company-white);
 }
 
 fieldset {
@@ -73,25 +74,30 @@ legend {
   margin-bottom: 1.2rem;
   font-size: 1.4rem;
   font-weight: bolder;
+  color: var(--company-black);
 }
 
 .form-row {
   display: grid;
-  gap: 1.5rem;
+  gap: 1.2rem;
   margin-bottom: 1.3rem;
   grid-template-columns: 1fr 1fr;
+}
+
+.form-row.single {
+  grid-template-columns: 1fr;
 }
 
 .input-group label {
   display: block;
   margin-bottom: 0.4rem;
   font-weight: 900;
-  color: rgba(217, 218, 215, 0.9);
+  color: var(--company-black-opacity);
 }
 
 #notes {
   border-radius: 1rem;
-  padding: 0 1rem;
+  padding: 2.2rem 1rem;
 }
 
 .input-group input,
@@ -103,7 +109,7 @@ legend {
   border: 2px solid #1172ea;
   font-size: 0.9rem;
   outline: none;
-  background: #ebeff7;
+  background: #ffffff;
   transition: 1.2s all;
 }
 
@@ -111,8 +117,7 @@ legend {
 .input-group select:focus,
 #notes:focus {
   border-color: #0f172a;
-  background: #20055a;
-  color: white;
+  box-shadow: 0 0px 0 4px rgba(51, 62, 77, 0.9);
 }
 
 .input-group small {
