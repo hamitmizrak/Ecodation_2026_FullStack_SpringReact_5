@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en" data-bs-theme="light">
   <head>
     <!-- Türkçe karakter sorunu çözsün: üğşçöıÜĞŞÇÖİ -->
     <meta charset="UTF-8" />
@@ -13,7 +13,7 @@
     <meta name="description" content="Full stack developer nedir?" />
 
     <!-- external css -->
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- <link rel="stylesheet" href="./assets/css/style.css" /> -->
 
     <!-- Bootstrap CSS v5.3.8 -->
     <link
@@ -34,125 +34,389 @@
     </noscript>
     <!--  Start Code -->
 
-    <!-- Form  -->
-    <main class="site-shell">
-      <!-- form card -->
-      <section class="form-card" id="form" aria-labelledby="form-title">
-        <!-- div.form-header>h2#form-title{Eğitim/Danıimanlık Başvuru Formu}+p{Bilgilerinizi eksiksiz giriniz} -->
-        <div class="form-header">
-          <h2 id="form-title">Eğitim/Danışmanlık Başvuru Formu</h2>
-          <p>Bilgilerinizi eksiksiz giriniz (*)</p>
+    <!-- bs5-navbar-default => TAB -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Logo</a>
+        <button
+          class="navbar-toggler d-lg-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapsibleNavId"
+          aria-controls="collapsibleNavId"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+          <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#" aria-current="page">
+                Home
+                <span class="visually-hidden">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="dropdownId"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="dropdownId">
+                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#loginId">
+                  Login
+                </a>
+                <a class="dropdown-item" href="#">Register</a>
+              </div>
+            </li>
+          </ul>
+          <form class="d-flex my-2 my-lg-0">
+            <input class="form-control me-sm-2" type="text" placeholder="Search" />
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
         </div>
+      </div>
+    </nav>
 
-        <!-- form -->
-        <form action="#" method="get" autocomplete="on">
-          <fieldset>
-            <legend>Kişisel Bilgiler</legend>
+    <!-- Login -->
 
-            <!-- Adınız/ soyad -->
-            <div class="form-row">
-              <div class="input-group">
-                <label for="fullname">Adınız (*)</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Adınız"
-                  minlength="3"
-                  required
-                  autofocus
-                />
-                <small class="input-help">En az 3 karakter uzunluğunda olmalıdır.</small>
+    <!-- Modal Body -->
+    <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+    <div
+      class="modal fade"
+      id="loginId"
+      tabindex="-1"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      role="dialog"
+      aria-labelledby="modalTitleId"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm"
+        role="document"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalTitleId">Login</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p class="text-center text-light">Giriş Yap</p>
+            <form action="" method="post">
+              <!-- username -->
+              <div class="form-group">
+                <label for="username" class="mb-3">Kullanıcı Adı</label>
+                <input type="text" name="username" id="username" class="form-control" />
               </div>
 
-              <!-- Soyadınız (*) -->
-              <div class="input-group">
-                <label for="surname">Soyadınız (*)</label>
-                <input
-                  type="text"
-                  id="surname"
-                  name="surname"
-                  placeholder="Soyadınız ..."
-                  minlength="3"
-                  required
-                />
-                <small class="input-help">En az 3 karakter uzunluğunda olmalıdır.</small>
+              <!-- password -->
+              <div class="form-group">
+                <label for="password" class="mb-3">Şifre</label>
+                <input type="password" name="password" id="password" class="form-control" />
               </div>
-            </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+            <button type="button" class="btn btn-primary">Giriş Yap</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
-            <!-- Email * -->
-            <div class="form-row">
-              <div class="input-group">
-                <label for="email">E-Posta (*)</label>
+    <!-- Form  -->
+    <main class="site-shell" style="margin-top: 3.53rem !important">
+      <!-- form card -->
+
+      <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+        <ol class="carousel-indicators">
+          <li
+            data-bs-target="#carouselId"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="First slide"
+          ></li>
+          <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
+          <li data-bs-target="#carouselId" data-bs-slide-to="2" aria-label="Third slide"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <div class="carousel-item active">
+            <img src="./assets/image/coffee.jpg" class="w-100 d-block" alt="First slide" />
+          </div>
+          <div class="carousel-item">
+            <img src="./assets/image/main1.jpg" class="w-100 d-block" alt="Second slide" />
+          </div>
+          <div class="carousel-item">
+            <img src="./assets/image/main2.jpg" class="w-100 d-block" alt="Third slide" />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselId"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselId"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <div class="contrainer">
+        <div class="row">
+          <div class="text-center">
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
                 <input
                   type="email"
-                  id="email"
-                  name="email"
-                  placeholder="örnek:hamitmizrak@gmail.com"
-                  required
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
                 />
-                <small class="input-help">örnek:hamitmizrak@gmail.com</small>
+                <div id="emailHelp" class="form-text">
+                  We'll never share your email with anyone else.
+                </div>
               </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" />
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
 
-              <!-- Telefon numaranız * -->
-              <div class="input-group">
-                <label for="phone">Telefon numaranız (*)</label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  placeholder="+90 111 222 33 44"
-                  pattern="[0-9\s()+-]{10,18}"
-                  required
-                />
-                <small class="input-help">
-                  Sadece telefon formatına uygun karakterler kullanılabilir.
-                </small>
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              Accordion Item #1
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse show"
+            aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">This is the first item's accordion body.</div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne2">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              Accordion Item #1
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse show"
+            aria-labelledby="headingOne2"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">This is the first item's accordion body.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="alert alert-secondary" role="alert">
+        <strong>Alert Heading</strong>
+        Some Word
+      </div>
+
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+
+        <strong>Holy guacamole!</strong>
+        You should check in on some of those fields below.
+      </div>
+
+      <span class="badge bg-warning text-dark">5 tane mail!</span>
+
+      <div class="dropdown">
+        <button
+          class="btn btn-secondary dropdown-toggle"
+          type="button"
+          id="triggerId"
+          data-bs-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Dropdown
+        </button>
+        <div class="dropdown-menu" aria-labelledby="triggerId">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item disabled" href="#">Disabled action</a>
+          <h6 class="dropdown-header">Section header</h6>
+          <a class="dropdown-item" href="#">Action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">After divider action</a>
+        </div>
+      </div>
+
+      <ul class="list-group list-group-numbered">
+        <li class="list-group-item active">Active item</li>
+        <li class="list-group-item">Item</li>
+        <li class="list-group-item disabled">Disabled item</li>
+      </ul>
+
+      <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+        <input
+          type="radio"
+          class="btn-check"
+          name="btnradio"
+          id="btnradio1"
+          autocomplete="off"
+          checked
+        />
+        <label class="btn btn-outline-danger" for="btnradio1">Radio 1</label>
+
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" />
+        <label class="btn btn-outline-danger" for="btnradio2">Radio 2</label>
+
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off" />
+        <label class="btn btn-outline-danger" for="btnradio3">Radio 3</label>
+      </div>
+
+      <div class="row align-items-md-stretch">
+        <div class="col-md-6">
+          <div class="h-100 p-5 text-white bg-primary border rounded-3">
+            <h2>Change the background</h2>
+            <p>
+              Swap the background-color utility and add a `.text-*` color utility to remix the hero
+              section look. Then, mix and match with additional component themes and more.
+            </p>
+            <button class="btn btn-outline-primary" type="button">Example button</button>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="h-100 p-5 bg-primary border rounded-3">
+            <h2>Add borders</h2>
+            <p>
+              Or, keep it light and add a border for some added definition to the boundaries of your
+              content. Be sure to look under the hood at the source HTML here as we've adjusted the
+              alignment and sizing of both columns for equal height.
+            </p>
+            <button
+              class="btn Swap the background-color utility and add a `.text-*` color utility to remix the hero section look. Then, mix and match with additional component themes and more."
+              type="button"
+            >
+              Example button
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-center align-items-center">
+        <div class="spinner-border text-primary spinner-border-sm" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+
+      <section id="company">
+        <!-- 4 tane kart yanyana = 12 /4 =3 -->
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="card">
+                <img class="card-img-top" src="./assets/image/about.jpg" alt="Title" />
+                <div class="card-body">
+                  <h4 class="card-title">Title</h4>
+                  <p class="card-text">Text</p>
+                </div>
               </div>
             </div>
-
-            <!-- Notes -->
-            <div class="form-row">
-              <div class="input-group">
-                <label for="notes">Notes</label>
-                <textarea name="notes" id="notes" cols="76" rows="10"></textarea>
+            <div class="col-md-3">
+              <div class="card">
+                <img class="card-img-top" src="./assets/image/about.jpg" alt="Title" />
+                <div class="card-body">
+                  <h4 class="card-title">Title</h4>
+                  <p class="card-text">Text</p>
+                </div>
               </div>
             </div>
-
-            <!-- Şehir -->
-            <div class="form-row single">
-              <div class="input-group">
-                <label for="city">Şehir</label>
-                <select name="city" id="city">
-                  <option value="" selected disabled>Seçiniz</option>
-                  <option value="malatya">Malatya</option>
-                  <option value="istanbul">İstanbul</option>
-                  <option value="ankara">Ankara</option>
-                  <option value="izmir">İzmir</option>
-                  <option value="bursa">Bursa</option>
-                </select>
-                <small class="input-help">Şehir seçiniz(*)</small>
+            <div class="col-md-3">
+              <div class="card">
+                <img class="card-img-top" src="./assets/image/about.jpg" alt="Title" />
+                <div class="card-body">
+                  <h4 class="card-title">Title</h4>
+                  <p class="card-text">Text</p>
+                </div>
               </div>
             </div>
-
-            <!-- check -->
-            <div class="form-row single">
-              <div class="check-line">
-                <input type="checkbox" id="terms" name="terms" required checked44 />
-                <label for="terms">Kullanım koşullarını kabul ediyorum (*)</label>
-                <a href="#">Aydınlatma Metni</a>
+            <div class="col-md-3">
+              <div class="card">
+                <img class="card-img-top" src="./assets/image/about.jpg" alt="Title" />
+                <div class="card-body">
+                  <h4 class="card-title">Title</h4>
+                  <p class="card-text">Text</p>
+                </div>
               </div>
             </div>
-
-            <div class="button-row">
-              <button class="ghost-btn" type="reset">Temizle</button>
-              <button class="submit-btn" type="submit">Başvuyu Gönder</button>
-            </div>
-          </fieldset>
-        </form>
+          </div>
+        </div>
       </section>
     </main>
     <!--  End Code -->
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5 bg-primary text-warning h6">SOL TARAF</div>
+          <div class="col-md-7 bg-dark h6">SAĞ TARAF</div>
+        </div>
+        <div class="text-center">
+          &copy; 2023 My Website.
+          <button class="btn btn-primary shadow">All rights reserved</button>
+          .
+        </div>
+      </div>
+    </footer>
 
     <!-- Bootstrap JavaScript Bundle (includes Popper) -->
     <script
