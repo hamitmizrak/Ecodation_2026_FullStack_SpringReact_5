@@ -110,20 +110,29 @@ legend {
   font-size: 0.9rem;
   outline: none;
   background: #ffffff;
-  transition: 1.2s all;
+  transition: 0.9s all;
 }
 
 .input-group input:focus,
 .input-group select:focus,
 #notes:focus {
-  border-color: #0f172a;
+  border-color: #3e5da5;
   box-shadow: 0 0px 0 4px rgba(51, 62, 77, 0.9);
+}
+
+.input-group input:invalid:not(:placeholder-shown) {
+  border-color: #ef4444;
+}
+
+.input-group input:valid:not(:placeholder-shown) {
+  border-color: #22c55e;
 }
 
 .input-group small {
   display: block;
   margin-top: 0.4rem;
-  color: rgba(255, 0, 0, 0.6);
+  color: rgba(202, 83, 83, 0.6);
+  font-size: 0.7rem;
 }
 
 .check-line {
@@ -133,7 +142,8 @@ legend {
   padding: 0.9rem;
   border: 1px solid #1172ea;
   border-radius: 0.5rem;
-  background: #5889eb;
+  background: #02102c;
+  color: var(--company-white);
 }
 
 .check-line input {
@@ -142,7 +152,7 @@ legend {
 }
 
 .check-line a {
-  color: #0f172a;
+  color: #7292df;
   font-weight: bold;
   margin-left: 0.5rem;
   text-decoration: none;
@@ -160,25 +170,34 @@ legend {
   border-radius: 1.2rem;
   font-weight: bold;
   cursor: pointer;
-  transition: 0.2s;
+  transition: 0.6s;
+}
+
+button:hover {
+  transform: translate(-0.5rem);
+  transition: 0.8s all;
 }
 
 .ghost-btn {
   color: #0f172a;
+  background: #ffffff;
   border: 2px solid #1172ea;
-  background: #1172ea;
+}
+
+.ghost-btn:hover {
+  color: #ffffff;
+  background: #0f172a;
 }
 
 .submit-btn {
-  color: var(--white);
-  border: 2px solid #1172ea;
+  border: 0;
+  color: #ffffff;
   background: #1172ea;
 }
 
-button:hover {
-  background: #0f172a;
-  color: var(--white);
-  border-color: #0f172a;
-  transform: translate(-0.5rem);
-  transition: 0.8s all;
+.submit-btn:hover {
+  color: #1172ea;
+  background: #ffffff;
 }
+
+/* Media Query */
