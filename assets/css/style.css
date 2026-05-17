@@ -87,8 +87,9 @@ legend {
   grid-template-columns: 1fr 1fr;
 }
 
-.form-row.single {
+.form-row .single {
   grid-template-columns: 1fr;
+  background: #1172ea!important;
 }
 
 .input-group label {
@@ -213,21 +214,19 @@ button:hover {
     grid-template-columns: 1fr;
   }
 
-  .button-row{
+  .button-row {
     flex-direction: column;
   }
 
-  button{
+  button {
     width: 100%;
   }
 }
 
-
 @media (min-width: 900px) {
   body {
-
-  background-image: url('../image/header1.jpg');
-  background-position: center;
-  background-size: cover;
-}
+    background-image: url('../image/header1.jpg');
+    background-position: center;
+    background-size: cover;
+  }
 }
