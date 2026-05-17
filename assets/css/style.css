@@ -204,3 +204,30 @@ button:hover {
 }
 
 /* Media Query */
+@media (min-width: 700px) {
+  .form-card {
+    padding: 10rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .button-row{
+    flex-direction: column;
+  }
+
+  button{
+    width: 100%;
+  }
+}
+
+
+@media (min-width: 900px) {
+  body {
+
+  background-image: url('../image/header1.jpg');
+  background-position: center;
+  background-size: cover;
+}
+}
