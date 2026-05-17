@@ -22,7 +22,7 @@ body {
   color: #fff; 
   color: #f0f1f2; */
   color: var(--company-black);
-  background: linear-gradient(135deg, #6a6e6e, #000000);
+  background: linear-gradient(135deg, #ffffff, #ece9e9);
 }
 
 .site-shell {
