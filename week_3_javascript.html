@@ -24,6 +24,9 @@
     />
 
     <!-- internal css -->
+     <style>
+      
+     </style>
 
     <style></style>
   </head>
@@ -115,32 +118,30 @@
           <div class="invalid-feedback">Geçerli bir telefon numarası giriniz.</div>
         </div>
 
-
-                <!-- Eğitim Türü -->
+        <!-- Eğitim Türü -->
         <div class="col-md-6">
           <label for="educationType" class="form-label">
             Eğitim Türü
             <span class="required">*</span>
           </label>
-         
+
           <select name="educationType" id="educationType" class="form-select">
             <option value="">Eğitim türünü seçiniz</option>
             <option value="frontend">Frontend Eğitimi</option>
             <option value="backend">Backend Eğitimi</option>
             <option value="fullstack">Full Stack Eğitimi</option>
-             <option value="devops">DevOps Eğitimi</option>
-          
+            <option value="devops">DevOps Eğitimi</option>
           </select>
           <div class="invalid-feedback">Eğitim türünü seçiniz.</div>
         </div>
 
-                        <!-- Deneyim Seviyesi -->
-        <div class="col-md-6">--
+        <!-- Deneyim Seviyesi -->
+        <div class="col-md-6">
           <label for="experience" class="form-label">
             Deneyim Seviyesi
             <span class="required">*</span>
           </label>
-         
+
           <select class="form-select" id="experience">
             <option value="">Deneyim Seviyesini seçiniz</option>
             <option value="beginner">Başlangıç Seviye</option>
@@ -150,6 +151,45 @@
           <div class="invalid-feedback">Deneyim seviyesini seçiniz.</div>
         </div>
 
+        <!-- Tercih Edilen Tarih -->
+        <div class="col-md-6">
+          <label for="date" class="form-label">
+            Tercih Edilen Tarih
+            <span class="required">*</span>
+          </label>
+          <input type="date" class="form-control" id="date" />
+        </div>
+
+        <!-- Açıklama -->
+        <div class="col-12">
+          <label for="message" class="form-label">Açıklama</label>
+          <textarea
+            name="message"
+            id="message"
+            rows="4"
+            class="form-control"
+            placeholder="Açıklama giriniz..."
+          ></textarea>
+        </div>
+
+        <!-- Form  -->
+        <div class="col-12">
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="agreement" required />
+            <label for="agreement" class="form-check-label">
+              Bilgilerimin iletişim amacıyla kullanılmasını kabul ediyorum.
+              <span class="required">*</span>
+            </label>
+
+            <div class="invalid-feedback">Bu kutuyu işaretleyiniz.</div>
+          </div>
+        </div>
+
+        <!-- Submit/Clear -->
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary w-5044">Gönder</button>
+          <button type="reset" class="btn btn-secondary w-5044">Temizle</button>
+        </div>
       </form>
     </main>
 
