@@ -139,6 +139,7 @@
             required
             title="Adınızı giriniz"
           />
+           <div class="invalid-feedback">Adınızı giriniz.</div>
         </div>
 
         <!-- Surname -->
@@ -151,10 +152,12 @@
             type="text"
             class="form-control"
             id="surname"
+            name="surname"
             placeholder="Soyadınızı giriniz..."
             required
             title="Soyadınızı giriniz"
           />
+           <div class="invalid-feedback">Soyadınızı giriniz.</div>
         </div>
 
         <!-- Email -->
@@ -167,11 +170,31 @@
             type="email"
             class="form-control"
             id="email"
+            name="email"
             placeholder="examples: hamitmizrak@gmail.com"
             required
             title="Emailinizi giriniz"
           />
           <div class="invalid-feedback">Geçerli bir email adresi giriniz.</div>
+        </div>
+
+
+         <!-- Password -->
+        <div class="col-md-6">
+          <label for="password" class="form-label mt-3">
+            Şifre
+            <span class="required">*</span>
+          </label>
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            name="password"
+            placeholder="Şifrenizi giriniz..."
+            required
+            title="Şifrenizi giriniz"
+          />
+          <div class="invalid-feedback">Geçerli bir şifre giriniz.</div>
         </div>
 
         <!-- Phone -->
@@ -184,6 +207,7 @@
             type="tel"
             class="form-control"
             id="phone"
+            name="phone"
             placeholder="05xx xxx xx xx"
             required
             title="Telefon numaranızı giriniz"
@@ -291,10 +315,28 @@
         event.preventDefault(); // Formun varsayılan submit davranışını engelle
 
         if(!form.checkValidity()){
-
+      event.stopPropagation(); // Geçersiz formun submit edilmesini engelle
+      successBox.style.display = "none"; // Başarı mesajını gizle
         }else {
-          
+          const formData = {
+            name: document.getElementById('name').value.trim(),
+            surname: document.getElementById('surname').value.trim(),
+            email: document.getElementById('email').value.trim(),
+            password : document.getElementById('password').value.trim(),
+            phone: document.getElementById('phone').value.trim(),
+            educationType: document.getElementById('educationType').value.trim(),
+            experience: document.getElementById('experience').value.trim(),
+            date: document.getElementById('date').value.trim(),
+            message: document.getElementById('message').value.trim(),
+            agreement: document.getElementById('agreement').checked
+          };
+
+          console.log("Form verileri:", formData); // Form verilerini konsola yazdır
+          successBox.style.display = "block"; // Başarı mesajını göster
+          form.reset(); // Formu temizle
+          form.classList.remove('was-validated'); // Form doğrulama sınıfını kaldır
         }
+        form.classList.add('was-validated'); // Form doğrulama sınıfını ekle
 
       }); // end event listener 
 
