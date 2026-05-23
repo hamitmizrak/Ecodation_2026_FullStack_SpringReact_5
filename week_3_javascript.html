@@ -40,7 +40,6 @@
 
     <!-- main.form-card>div.text-center.mb-4>h2.form-title{Eğitim / Danışmanlık Başvuru Formu}+p.form-subtitle{Lütfen bilgilerinizi eksiksiz doldurunuz} -->
     <main class="form-card">
-
       <!-- Form -->
       <section id="form_id">
         <div class="text-center mb-4">
@@ -48,6 +47,74 @@
           <p class="form-subtitle">Lütfen bilgilerinizi eksiksiz doldurunuz</p>
         </div>
       </section>
+
+      <form action="#" method="get" id="applicationForm" novalidate>
+        <!-- Name -->
+        <div class="col-md-6">
+          <label for="name" class="form-label">
+            Ad
+            <span class="required">*</span>
+          </label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            placeholder="Adınızı giriniz..."
+            required
+            title="Adınızı giriniz"
+          />
+        </div>
+
+        <!-- Surname -->
+        <div class="col-md-6">
+          <label for="surname" class="form-label">
+            Soyad
+            <span class="required">*</span>
+          </label>
+          <input
+            type="text"
+            class="form-control"
+            id="surname"
+            placeholder="Soyadınızı giriniz..."
+            required
+            title="Soyadınızı giriniz"
+          />
+        </div>
+
+        <!-- Email -->
+        <div class="col-md-6">
+          <label for="email" class="form-label">
+            Email
+            <span class="required">*</span>
+          </label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="examples: hamitmizrak@gmail.com"
+            required
+            title="Emailinizi giriniz"
+          />
+          <div class="invalid-feedback">Geçerli bir email adresi giriniz.</div>
+        </div>
+
+        <!-- Phone -->
+        <div class="col-md-6">
+          <label for="phone" class="form-label">
+            Telefon
+            <span class="required">*</span>
+          </label>
+          <input
+            type="tel"
+            class="form-control"
+            id="phone"
+            placeholder="05xx xxx xx xx"
+            required
+            title="Telefon numaranızı giriniz"
+          />
+          <div class="invalid-feedback">Geçerli bir telefon numarası giriniz.</div>
+        </div>
+      </form>
     </main>
 
     <!--  End Code -->
