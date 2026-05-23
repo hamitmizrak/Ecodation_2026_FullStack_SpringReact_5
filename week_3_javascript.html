@@ -259,7 +259,7 @@
         </div>
 
         <!-- Submit/Clear -->
-        <div class="col-12">
+        <div class="col-12 mt-4">
           <button type="submit" class="btn btn-primary btn-submit w-5044">Gönder</button>
           <button type="reset" class="btn btn-secondary btn-reset w-5044">Temizle</button>
         </div>
@@ -269,8 +269,6 @@
       <div id="successBox" style="margin-top:10px" class="alert alert-success success-box">Form başarıyla gönderildi!</div>
   </div>
 </div>
-
-       
     </main>
 
     <!--  End Code -->
@@ -280,5 +278,27 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Internal JavaScript -->
+     <script>
+      // Dom elementlerini seçme
+      const form = document.getElementById('applicationForm');
+      const successBox = document.getElementById('successBox');
+
+      // Form submit eventini dinleme
+      form.addEventListener("submit", function (event){
+
+        event.preventDefault(); // Formun varsayılan submit davranışını engelle
+
+        if(!form.checkValidity()){
+
+        }else {
+          
+        }
+
+      }); // end event listener 
+
+     </script>
+
   </body>
 </html>
