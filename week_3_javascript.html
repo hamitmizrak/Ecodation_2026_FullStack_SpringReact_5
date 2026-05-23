@@ -24,11 +24,81 @@
     />
 
     <!-- internal css -->
-     <style>
-      
-     </style>
+    <style>
+      body {
+        min-height: 100vh;
+        width: 100%;
+        background: linear-gradient(135deg, #253a69, #1e293b);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
 
-    <style></style>
+      .form-card {
+        width: 100%;
+        max-width: 760px;
+        background: #382323;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 20px 50px rgba(188, 182, 182, 0.1);
+      }
+
+      .form-title {
+        font-weight: 600;
+        color: #f8f9fa;
+        font-size: 28px;
+      }
+
+      .form-subtitle {
+        color: #9fc0e0;
+        font-size: 16px;
+      }
+
+      .required {
+        color: #e74c3c;
+      }
+
+      .form-control:focus,
+      .form-select:focus {
+        border-color: #007bff;
+        box-shadow: 0 2px 4px 0.2rem rgba(0, 123, 255, 0.25);
+      }
+
+      .btn-submit,
+      .btn-reset {
+        border: none;
+        font-weight: 700;
+        padding: 8px 24px;
+        border-radius: 10px;
+      }
+
+        .btn-submit {
+        background: #0f71da;
+      }
+
+      .btn-reset {
+        background: #e80b0b;
+      }
+
+
+      .btn-submit:hover,
+      .btn-reset:hover {
+        background: black;
+        color:white;
+        transition: all 1.2s ease;
+        transform: rotate(4deg);
+      }
+
+      .success-box {
+        display: none;
+        margin-top: 1rem;
+        background: #1f3145;
+        color:white;
+      }
+
+    </style>
   </head>
 
   <body>
@@ -52,9 +122,12 @@
       </section>
 
       <form action="#" method="get" id="applicationForm" novalidate>
-        <!-- Name -->
+
+<div class="container">
+  <div class="row">
+ <!-- Name -->
         <div class="col-md-6">
-          <label for="name" class="form-label">
+          <label for="name" class="form-label mt-3">
             Ad
             <span class="required">*</span>
           </label>
@@ -70,7 +143,7 @@
 
         <!-- Surname -->
         <div class="col-md-6">
-          <label for="surname" class="form-label">
+          <label for="surname" class="form-label mt-3">
             Soyad
             <span class="required">*</span>
           </label>
@@ -86,7 +159,7 @@
 
         <!-- Email -->
         <div class="col-md-6">
-          <label for="email" class="form-label">
+          <label for="email" class="form-label mt-3">
             Email
             <span class="required">*</span>
           </label>
@@ -103,7 +176,7 @@
 
         <!-- Phone -->
         <div class="col-md-6">
-          <label for="phone" class="form-label">
+          <label for="phone" class="form-label mt-3">
             Telefon
             <span class="required">*</span>
           </label>
@@ -120,7 +193,7 @@
 
         <!-- Eğitim Türü -->
         <div class="col-md-6">
-          <label for="educationType" class="form-label">
+          <label for="educationType" class="form-label mt-3">
             Eğitim Türü
             <span class="required">*</span>
           </label>
@@ -137,7 +210,7 @@
 
         <!-- Deneyim Seviyesi -->
         <div class="col-md-6">
-          <label for="experience" class="form-label">
+          <label for="experience" class="form-label mt-3">
             Deneyim Seviyesi
             <span class="required">*</span>
           </label>
@@ -153,7 +226,7 @@
 
         <!-- Tercih Edilen Tarih -->
         <div class="col-md-6">
-          <label for="date" class="form-label">
+          <label for="date" class="form-label mt-3">
             Tercih Edilen Tarih
             <span class="required">*</span>
           </label>
@@ -162,7 +235,7 @@
 
         <!-- Açıklama -->
         <div class="col-12">
-          <label for="message" class="form-label">Açıklama</label>
+          <label for="message" class="form-label mt-3">Açıklama</label>
           <textarea
             name="message"
             id="message"
@@ -187,10 +260,17 @@
 
         <!-- Submit/Clear -->
         <div class="col-12">
-          <button type="submit" class="btn btn-primary w-5044">Gönder</button>
-          <button type="reset" class="btn btn-secondary w-5044">Temizle</button>
+          <button type="submit" class="btn btn-primary btn-submit w-5044">Gönder</button>
+          <button type="reset" class="btn btn-secondary btn-reset w-5044">Temizle</button>
         </div>
       </form>
+
+
+      <div id="successBox" style="margin-top:10px" class="alert alert-success success-box">Form başarıyla gönderildi!</div>
+  </div>
+</div>
+
+       
     </main>
 
     <!--  End Code -->
