@@ -164,34 +164,81 @@ let number6 = '20',
 
 //**** STRING **********************
 let vocabularyData = ' javascript ÖĞReniyoruM javascript ';
-console.log(vocabularyData);
-console.log(vocabularyData.length);
-console.log(vocabularyData.trim().length);
-console.log(vocabularyData.toLowerCase());
-console.log(vocabularyData.toUpperCase());
+// console.log(vocabularyData);
+// console.log(vocabularyData.length);
+// console.log(vocabularyData.trim().length);
+// console.log(vocabularyData.toLowerCase());
+// console.log(vocabularyData.toUpperCase());
 
-//javascript ÖĞReniyoruM javascript
-vocabularyData = vocabularyData.trim();
-console.log(vocabularyData.startsWith('javascript'));
-console.log(vocabularyData.endsWith('javascript'));
+// //javascript ÖĞReniyoruM javascript
+// vocabularyData = vocabularyData.trim();
+// console.log(vocabularyData.startsWith('javascript'));
+// console.log(vocabularyData.endsWith('javascript'));
 
-console.log(vocabularyData.concat('.INC').concat('.data'));
+// console.log(vocabularyData.concat('.INC').concat('.data'));
 
-//  charAt(pos: number): string;
-console.log(vocabularyData.charAt(0));
-console.log(vocabularyData.indexOf('javascript'));
-console.log(vocabularyData.lastIndexOf('javascript'));
+// //  charAt(pos: number): string;
+// console.log(vocabularyData.charAt(0));
+// console.log(vocabularyData.indexOf('javascript'));
+// console.log(vocabularyData.lastIndexOf('javascript'));
 
-console.log(vocabularyData.substring(1));
-console.log(vocabularyData.substring(1,4));  // 1<=X<=4-1
+// console.log(vocabularyData.substring(1));
+// console.log(vocabularyData.substring(1,4));  // 1<=X<=4-1
 
-console.log(vocabularyData.split(""))
+// console.log(vocabularyData.split(""))
 
 // Kullanıcıdan alınan bir kelimenin yukarıda öğrendiğiniz  yapılarla benzer örnekler yapınız
 
-
-
 //**** FUNCTION ********************
+// 1- parametresiz, returnsuz
+function calculatorData1() {
+  console.log('parametresiz, returnsuz');
+}
+calculatorData1();
+
+// 2- parametreli, returnsuz
+function calculatorData2(data) {
+  console.log('parametreli, returnsuz ' + data);
+}
+calculatorData2('Merhabalar');
+
+// 3- parametresiz, returnlu
+function calculatorData3() {
+  return 'parametresiz, returnlu ';
+}
+const data3 = calculatorData3();
+console.log(data3);
+
+// 4- parametreli, returnsuz
+function calculatorData4(data) {
+  return 'parametreli, returnlu ' + data;
+}
+const data4 = calculatorData4('Merhabalar');
+console.log(data4);
+console.log('****************************');
+
+//**** FUNCTION INTERMEDIA ***************
+// 1-Normal Function
+function calculatorNormal() {
+  console.log('Normal Function');
+}
+calculatorNormal();
+
+// 2-Anonymous Function
+const calculatorAnonymous = function () {
+  console.log('Anonymous Function');
+};
+calculatorAnonymous();
+
+// 3-Arrow Function
+const calculatorArrowFunction=  () => {
+  console.log('Arrow Function ');
+};
+calculatorArrowFunction();
+
+// 4-) Immedia Function
+// ()(()=>{})
+
 //**** CONDITION *******************
 //**** LOOP ************************
 //**** ARRAY ***********************
