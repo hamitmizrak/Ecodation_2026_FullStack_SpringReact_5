@@ -397,7 +397,37 @@ const arrayDatas3 = () => {
   });
 };
 
-arrayDatas3();
+//arrayDatas3();
 
 // console.log(vocabularyData.split(""))
 //**** OBJECT **********************
+const objectData = () => {
+  let person = {
+    "name":"Hamit",
+    "surname":"Mızrak",
+    "number":123456789,
+    "isLogin":true,
+    "software":["Html5","Css3","Bootstrap5","Javascript"],
+    "fullName": function (){
+      console.log(`${this["name"]} ${this.surname}`);
+      
+    },
+    "java":{
+      name:"Java",
+      year:26,
+      version:25
+    }
+  };
+
+  console.log(person);
+  console.log(person.name);
+  console.log(person.name.toUpperCase());
+  console.log(person.java.name);
+
+  for (let temp  in person){
+    document.writeln(`${temp}: ${person[temp]}`)
+  }
+  
+};
+
+objectData();
