@@ -402,6 +402,7 @@ const arrayDatas3 = () => {
 // console.log(vocabularyData.split(""))
 //**** OBJECT **********************
 const objectData = () => {
+  
   let person = {
     "name":"Hamit",
     "surname":"Mızrak",
