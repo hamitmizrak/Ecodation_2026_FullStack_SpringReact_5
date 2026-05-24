@@ -194,27 +194,27 @@ let vocabularyData = ' javascript ÖĞReniyoruM javascript ';
 function calculatorData1() {
   console.log('parametresiz, returnsuz');
 }
-calculatorData1();
+// calculatorData1();
 
 // 2- parametreli, returnsuz
 function calculatorData2(data) {
   console.log('parametreli, returnsuz ' + data);
 }
-calculatorData2('Merhabalar');
+// calculatorData2('Merhabalar');
 
 // 3- parametresiz, returnlu
 function calculatorData3() {
   return 'parametresiz, returnlu ';
 }
 const data3 = calculatorData3();
-console.log(data3);
+// console.log(data3);
 
 // 4- parametreli, returnsuz
 function calculatorData4(data) {
   return 'parametreli, returnlu ' + data;
 }
 const data4 = calculatorData4('Merhabalar');
-console.log(data4);
+// console.log(data4);
 console.log('****************************');
 
 //**** FUNCTION INTERMEDIA ***************
@@ -222,24 +222,94 @@ console.log('****************************');
 function calculatorNormal() {
   console.log('Normal Function');
 }
-calculatorNormal();
+// calculatorNormal();
 
 // 2-Anonymous Function
 const calculatorAnonymous = function () {
   console.log('Anonymous Function');
 };
-calculatorAnonymous();
+// calculatorAnonymous();
 
 // 3-Arrow Function
 const calculatorArrowFunction=  () => {
   console.log('Arrow Function ');
 };
-calculatorArrowFunction();
+// calculatorArrowFunction();
 
 // 4-) Immedia Function
 // ()(()=>{})
 
+
 //**** CONDITION *******************
+const condition1=()=>{
+  let number = 20;
+  if(number>0){
+    console.log("Sayı pozitif");
+  }else {
+    console.log('Sayı negatif');
+  }
+}
+condition1();
+
+
+// ternary
+const condition2 = () => {
+  let number = 20;
+  let result = number > 0 ? 'Sayı pozitif' : 'Sayı negatif'; 
+  console.log(result);
+  
+};
+condition2();
+
+const condition3 = () => {
+  let number = 5;
+  if (number == 1) {
+    console.log('Sayı 1');
+  } else if (number == 2) {
+    console.log('Sayı 2');
+  } else if (number == 3) {
+    console.log('Sayı 3');
+  } else if (number == 4) {
+    console.log('Sayı 4');
+  } else if (number == 5) {
+    console.log('Sayı 5');
+  } else {
+    console.log('1<=SAYI<=5 dışındadır');
+  } 
+};
+condition3();
+
+const condition4 = () => {
+  let number = 5;
+  
+  switch (number) {
+    case 1:
+      console.log('Sayı 1');
+      break;
+    case 2:
+      console.log('Sayı 2');
+      break;
+    case 3:
+      console.log('Sayı 3');
+      break;
+    case 4:
+      console.log('Sayı 4');
+      break;
+    case 5:
+      console.log('Sayı 5');
+      break;
+
+      default:
+         console.log('1<=SAYI<=5 dışındadır');
+         break;
+
+  }
+};
+condition4();
+
+
+
+
 //**** LOOP ************************
 //**** ARRAY ***********************
 // console.log(vocabularyData.split(""))
