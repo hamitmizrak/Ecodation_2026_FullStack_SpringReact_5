@@ -308,7 +308,7 @@ let loopNormal = () => {
   let result = 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10;
   console.log(result);
 };
-loopNormal();
+// loopNormal();
 
 let loop1 = () => {
   let result = 0;
@@ -319,7 +319,7 @@ let loop1 = () => {
   console.log(result);
   // sonsuz for => for(;;){}
 };
-loop1();
+// loop1();
 
 let loop2 = () => {
   let result = 0;
@@ -332,8 +332,72 @@ let loop2 = () => {
   console.log(result);
   // sonsuz for => while(true){}
 };
-loop2();
+// loop2();
 
 //**** ARRAY ***********************
+// LIFO, FIFO
+const arrayDatas1 = () => {
+  let city = ['Malatya', 'Ankara', 'Sivas', 'Bingöl', 'İzmir'];
+  console.log(city);
+  console.log(typeof city);
+  console.log(city[0]);
+  console.log(city[4]);
+  console.log(city[city.length - 1]);
+
+  console.log('***********');
+  for (let i = 0; i < city.length; i++) {
+    console.log(city[i]);
+  }
+
+  console.log('***********');
+  city.unshift('Diyarbakır');
+  city.push('Elazığ');
+
+  city.sort();
+  //city.sort().reverse()
+  for (let i = 0; i < city.length; i++) {
+    console.log(city[i]);
+  }
+};
+
+//arrayDatas1();
+
+const arrayDatas2 = () => {
+  let city = ['Malatya', 'Ankara', 'Sivas', 'Bingöl', 'İzmir'];
+
+  city.sort();
+  //city.sort().reverse()
+
+  for (let temp in city) {
+    console.log(temp + ' ==> ' + city[temp]);
+    // interpolation
+    console.log(`${temp} ==> ${city[temp]}`);
+  }
+};
+
+//arrayDatas2();
+
+const arrayDatas3 = () => {
+  let city = ['Malatya', 'Ankara', 'Sivas', 'Bingöl', 'İzmir'];
+
+  city.sort();
+  //city.sort().reverse()
+
+  // ES5
+  city.forEach((value, index, array) => {
+    console.log(`${value}`);
+  });
+
+  city.forEach((value, index, array) => {
+    console.log(`${index}`);
+  });
+
+  city.forEach((value, index, array) => {
+    console.log(`${array}`);
+  });
+};
+
+arrayDatas3();
+
 // console.log(vocabularyData.split(""))
 //**** OBJECT **********************
