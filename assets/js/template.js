@@ -231,7 +231,7 @@ const calculatorAnonymous = function () {
 // calculatorAnonymous();
 
 // 3-Arrow Function
-const calculatorArrowFunction=  () => {
+const calculatorArrowFunction = () => {
   console.log('Arrow Function ');
 };
 // calculatorArrowFunction();
@@ -239,27 +239,24 @@ const calculatorArrowFunction=  () => {
 // 4-) Immedia Function
 // ()(()=>{})
 
-
 //**** CONDITION *******************
-const condition1=()=>{
+const condition1 = () => {
   let number = 20;
-  if(number>0){
-    console.log("Sayı pozitif");
-  }else {
+  if (number > 0) {
+    console.log('Sayı pozitif');
+  } else {
     console.log('Sayı negatif');
   }
-}
-condition1();
-
+};
+// condition1();
 
 // ternary
 const condition2 = () => {
   let number = 20;
-  let result = number > 0 ? 'Sayı pozitif' : 'Sayı negatif'; 
+  let result = number > 0 ? 'Sayı pozitif' : 'Sayı negatif';
   console.log(result);
-  
 };
-condition2();
+// condition2();
 
 const condition3 = () => {
   let number = 5;
@@ -275,13 +272,13 @@ const condition3 = () => {
     console.log('Sayı 5');
   } else {
     console.log('1<=SAYI<=5 dışındadır');
-  } 
+  }
 };
-condition3();
+// condition3();
 
 const condition4 = () => {
   let number = 5;
-  
+
   switch (number) {
     case 1:
       console.log('Sayı 1');
@@ -299,16 +296,44 @@ const condition4 = () => {
       console.log('Sayı 5');
       break;
 
-      default:
-         console.log('1<=SAYI<=5 dışındadır');
-         break;
-
+    default:
+      console.log('1<=SAYI<=5 dışındadır');
+      break;
   }
 };
-condition4();
-
+// condition4();
 
 //**** LOOP ************************
+let loopNormal = () => {
+  let result = 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10;
+  console.log(result);
+};
+loopNormal();
+
+let loop1 = () => {
+  let result = 0;
+  for (let index = 1; index <= 10; index++) {
+    //result = result + index;
+    result += index;
+  }
+  console.log(result);
+  // sonsuz for => for(;;){}
+};
+loop1();
+
+let loop2 = () => {
+  let result = 0;
+  let index = 1;
+  while (index <= 10) {
+    //result = result + index;
+    result += index;
+    index++;
+  }
+  console.log(result);
+  // sonsuz for => while(true){}
+};
+loop2();
+
 //**** ARRAY ***********************
 // console.log(vocabularyData.split(""))
 //**** OBJECT **********************
