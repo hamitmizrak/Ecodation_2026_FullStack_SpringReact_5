@@ -121,11 +121,11 @@ let arrayData = [4, 5, 6, 8, 'merhabalar', true];
 let number1 = 23,
   number2 = 3;
 
-console.log('Toplama: ' + (number1 + number2));
-console.log('Çıkarma: ' + (number1 - number2));
-console.log('Çarpma: ' + (number1 * number2));
-console.log('Bölme: ' + (number1 / number2));
-console.log('Kalan:' + (number1 % number2));
+// console.log('Toplama: ' + (number1 + number2));
+// console.log('Çıkarma: ' + (number1 - number2));
+// console.log('Çarpma: ' + number1 * number2);
+// console.log('Bölme: ' + number1 / number2);
+// console.log('Kalan:' + (number1 % number2));
 
 // =
 // ==
@@ -138,5 +138,29 @@ console.log('Kalan:' + (number1 % number2));
 // String() ==> kelimeye çevirir
 let number6 = '20',
   number7 = 40;
-console.log(number6 + number7);
-console.log(Number(number6) + number7);
+// console.log(number6 + number7);
+// console.log(Number(number6) + number7);
+
+//**** MATH ************************
+
+console.log("E: "+ (Math.E));
+console.log("PI: "+ (Math.PI));
+console.log("Küçük: "+ (Math.min(5,6,3,900,-100)));
+console.log("Büyük: "+ (Math.max(5,6,3,900,-100)));
+console.log("Mutlak: "+ (Math.abs(-100)));
+console.log("Karekök: "+ (Math.sqrt(25)));
+console.log("üslü: "+ (Math.pow(2,5)));
+console.log("üslü: "+ (Math.pow(2,"5")));
+console.log("üslü: "+ (Math.pow(2,Number("5"))));
+console.log("NaN: Not A Number: "+ (Math.pow("asd","5")));
+
+console.log('aşağı yuvarla: ' + Math.floor(4.9));
+console.log('yukarı yuvarla: ' + Math.ceil(4.1));
+console.log('aşağı/yukarı yuvarla: ' + Math.round(8.4));
+console.log('aşağı/yukarı yuvarla: ' + Math.round(8.5));
+console.log('aşağı/yukarı yuvarla: ' + Math.round(8.6));
+
+console.log('Sinüs: ' + Math.sin(45));
+console.log('Cosinüs: ' + Math.cos(45));
+
+
