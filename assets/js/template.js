@@ -308,8 +308,6 @@ const condition4 = () => {
 condition4();
 
 
-
-
 //**** LOOP ************************
 //**** ARRAY ***********************
 // console.log(vocabularyData.split(""))
