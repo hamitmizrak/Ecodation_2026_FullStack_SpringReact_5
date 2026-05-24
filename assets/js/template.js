@@ -142,29 +142,58 @@ let number6 = '20',
 // console.log(Number(number6) + number7);
 
 //**** MATH ************************
-console.log('E: ' + Math.E);
-console.log('PI: ' + Math.PI);
-console.log('Küçük: ' + Math.min(5, 6, 3, 900, -100));
-console.log('Büyük: ' + Math.max(5, 6, 3, 900, -100));
-console.log('Mutlak: ' + Math.abs(-100));
-console.log('Karekök: ' + Math.sqrt(25));
-console.log('üslü: ' + Math.pow(2, 5));
-console.log('üslü: ' + Math.pow(2, '5'));
-console.log('üslü: ' + Math.pow(2, Number('5')));
-console.log('NaN: Not A Number: ' + Math.pow('asd', '5'));
+// console.log('E: ' + Math.E);
+// console.log('PI: ' + Math.PI);
+// console.log('Küçük: ' + Math.min(5, 6, 3, 900, -100));
+// console.log('Büyük: ' + Math.max(5, 6, 3, 900, -100));
+// console.log('Mutlak: ' + Math.abs(-100));
+// console.log('Karekök: ' + Math.sqrt(25));
+// console.log('üslü: ' + Math.pow(2, 5));
+// console.log('üslü: ' + Math.pow(2, '5'));
+// console.log('üslü: ' + Math.pow(2, Number('5')));
+// console.log('NaN: Not A Number: ' + Math.pow('asd', '5'));
 
-console.log('aşağı yuvarla: ' + Math.floor(4.9));
-console.log('yukarı yuvarla: ' + Math.ceil(4.1));
-console.log('aşağı/yukarı yuvarla: ' + Math.round(8.4));
-console.log('aşağı/yukarı yuvarla: ' + Math.round(8.5));
-console.log('aşağı/yukarı yuvarla: ' + Math.round(8.6));
+// console.log('aşağı yuvarla: ' + Math.floor(4.9));
+// console.log('yukarı yuvarla: ' + Math.ceil(4.1));
+// console.log('aşağı/yukarı yuvarla: ' + Math.round(8.4));
+// console.log('aşağı/yukarı yuvarla: ' + Math.round(8.5));
+// console.log('aşağı/yukarı yuvarla: ' + Math.round(8.6));
 
-console.log('Sinüs: ' + Math.sin(45));
-console.log('Cosinüs: ' + Math.cos(45));
+// console.log('Sinüs: ' + Math.sin(45));
+// console.log('Cosinüs: ' + Math.cos(45));
 
 //**** STRING **********************
+let vocabularyData = ' javascript ÖĞReniyoruM javascript ';
+console.log(vocabularyData);
+console.log(vocabularyData.length);
+console.log(vocabularyData.trim().length);
+console.log(vocabularyData.toLowerCase());
+console.log(vocabularyData.toUpperCase());
+
+//javascript ÖĞReniyoruM javascript
+vocabularyData = vocabularyData.trim();
+console.log(vocabularyData.startsWith('javascript'));
+console.log(vocabularyData.endsWith('javascript'));
+
+console.log(vocabularyData.concat('.INC').concat('.data'));
+
+//  charAt(pos: number): string;
+console.log(vocabularyData.charAt(0));
+console.log(vocabularyData.indexOf('javascript'));
+console.log(vocabularyData.lastIndexOf('javascript'));
+
+console.log(vocabularyData.substring(1));
+console.log(vocabularyData.substring(1,4));  // 1<=X<=4-1
+
+console.log(vocabularyData.split(""))
+
+// Kullanıcıdan alınan bir kelimenin yukarıda öğrendiğiniz  yapılarla benzer örnekler yapınız
+
+
+
 //**** FUNCTION ********************
 //**** CONDITION *******************
 //**** LOOP ************************
 //**** ARRAY ***********************
+// console.log(vocabularyData.split(""))
 //**** OBJECT **********************
